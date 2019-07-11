@@ -4,7 +4,7 @@ import { Query } from 'react-apollo';
 import LaunchItem from './LaunchItem';
 
 const LAUNCHES_QUERY = gql`
-  {
+  query {
     launches {
       flight_number
       mission_name

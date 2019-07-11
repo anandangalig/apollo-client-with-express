@@ -3,8 +3,8 @@ import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 
 const GET_LAUNCH_DETAILS = gql`
-  query launch($flight_number: Int!) {
-    launch(flight_number: $flight_number) {
+  query ThisCanBeNamedWhatever($flight_number1: Int!) {
+    launch(flight_number: $flight_number1) {
       flight_number
       mission_name
       launch_year
@@ -24,7 +24,7 @@ export class Launch extends Component {
     let flight_number = this.props.match.params.flight_number;
     flight_number = +flight_number;
     return (
-      <Query query={GET_LAUNCH_DETAILS} variables={{ flight_number }}>
+      <Query query={GET_LAUNCH_DETAILS} variables={{ flight_number1: flight_number }}>
         {({ loading, error, data }) => {
           if (loading) return <h3>Loading...</h3>;
           if (error) console.log(error);

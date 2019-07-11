@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix apollo_client",
+    "client": "npm start --prefix client_react_apollo",
     "dev": "concurrently \" npm run server\" \" npm run client\""
   },
   "author": "",
